@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    text-decoration: none;
+
+    list-style: none;
+    border-collapse: collapse;
+    scroll-behavior: smooth;
+}
+
+a,
+span,
+img,
+button,
+label,
+input,
+textarea {
+    display: inline-block;
+}

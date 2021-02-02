@@ -1,0 +1,59 @@
+@import "reset";
+
+body {
+    background-color: #1e2225;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px #00000080;
+    background: linear-gradient(45deg, #007780, #3486f1, #223b5e);
+    font-family: sans-serif;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    background-size: 200% auto;
+    transition: background-position 0.5s;
+
+    &:hover {
+        background-position: right center;
+    }
+}
+
+.small-button {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.alert {
+    background: rgb(134, 255, 12);
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    font-weight: 400;
+    box-shadow: 0 0 20px #00000080;
+    position: absolute;
+    transform: scale(0);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &.open {
+        transform: scale(1);
+    }
+}
+
+p {
+    display: block;
+    margin-bottom: 10px;
+}
