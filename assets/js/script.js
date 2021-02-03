@@ -1,22 +1,27 @@
 var button = document.getElementById("button");
 var alertBox = document.getElementById("alert");
-var closeButton = document.getElementById("close-button")
+var closeButton = document.getElementById("close-button");
 
 button.addEventListener("click", function () {
-    alertBox.classList.add("open");
-    button.style.display = "none";
+    openAlertBox();
 });
 
-// document.addEventListener("click", function (event) {
-//     if (event.target != button && event.target != alertBox) {
-//         alertBox.classList.remove("open");
-//         button.style.display = "block";
-//     }
-// });
+document.addEventListener("click", function (event) {
+    if (event.target != button && event.target != alertBox && event.target != closeButton) {
+        closeAlertBox();
+    }
+});
 
 closeButton.addEventListener("click", function () {
-    alertBox.classList.remove("open");
-    button.style.display = "block";
+    closeAlertBox();
 });
 
-console.log(closeButton)
+function openAlertBox() {
+    alertBox.classList.add("open");
+    button.style.display = "none";
+};
+
+function closeAlertBox() {
+    alertBox.classList.remove("open");
+    button.style.display = "block";
+}
